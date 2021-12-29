@@ -4,12 +4,7 @@ import { BrowserRouter as Router, Link, Routes, Route,Switch } from 'react-route
 import PropTypes from 'prop-types';
 
 import { fetchPosts } from '../actions/posts';
-import { Home, Navbar, Page404 } from './';
-
-const Login = (props) => {
-  console.log(props);
-  return <div>Login</div>;
-};
+import { Home, Navbar, Page404, Login } from './';
 
 const Signup = () => <div>Signup</div>;
 
