@@ -37,9 +37,9 @@ class App extends React.Component {
             </ul>
         </div>
         <Routes>
-          <Route exact path="/" element={Home} />
-          <Route path="/login" element={Login} />
-          <Route path="/signup" element={Signup} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     );
