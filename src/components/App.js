@@ -12,11 +12,11 @@ import {
 import PropTypes, { element } from 'prop-types';
 
 import { fetchPosts } from '../actions/posts';
-import { Home, Navbar, Page404, Login, Signup } from './';
+import { Home, Navbar, Page404, Login, Signup, Settings } from './';
 import jwt_decode from 'jwt-decode';
 import { authenticateUser } from '../actions/auth';
 
-const Settings = () => <div>Setting</div>;
+// const Settings = () => <div>Setting</div>;
 
 const PrivateRoute = (privateRouteProps) => {
   const { isLoggedin } = privateRouteProps;
