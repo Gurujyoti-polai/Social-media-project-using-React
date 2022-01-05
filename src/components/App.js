@@ -8,6 +8,7 @@ import {
   Switch,
   Navigate,
   Outlet,
+  useLocation,
 } from 'react-router-dom';
 import PropTypes, { element } from 'prop-types';
 
@@ -19,9 +20,14 @@ import { authenticateUser } from '../actions/auth';
 // const Settings = () => <div>Setting</div>;
 
 const PrivateRoute = (privateRouteProps) => {
+  const location = useLocation();
   const { isLoggedin } = privateRouteProps;
 
-  return isLoggedin ? <Outlet /> : <Navigate to="/login" />;
+  return isLoggedin ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/login" state={{ from: location.pathname }} />
+  );
 };
 
 class App extends React.Component {
